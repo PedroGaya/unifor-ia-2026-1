@@ -18,5 +18,5 @@ ax.set_title('Power curve for wind turbine', fontweight='bold')
 ax.grid(True, linestyle='--', alpha=0.4)
 
 plt.tight_layout()
-plt.savefig('out/scatter.png')
+plt.savefig('out/aero_scatter.png')
 plt.show()
