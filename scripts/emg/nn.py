@@ -10,7 +10,7 @@ N, P = X.shape
 
 rounds = 10
 ratio = 0.2
-rng = np.random.default_rng(42)
+rng = np.random.default_rng()
 
 variants = {
     'MLP (32,16)':      (32, 16),

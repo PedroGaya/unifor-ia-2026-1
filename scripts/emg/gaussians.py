@@ -54,13 +54,16 @@ rounds = 500
 ratio = 0.2
 rng = np.random.default_rng(42)
 
+lambdas = [0, 0.001, 0.01, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+
 variants = {
     'Standard (QDA)':    cov_standard,
     'Equal cov (LDA)':   cov_equal,
     'Aggregate':         cov_aggregate,
-    'Regularized λ=0.5': cov_regularized(lam=0.5),
     'Naive Bayes':       cov_naive_bayes,
 }
+for l in lambdas:
+    variants[f'Regularized lambda={l}'] = cov_regularized(lam=l)
 
 results = {name: np.zeros(rounds) for name in variants}
 

@@ -52,7 +52,7 @@ def validate(X, y, degree=3, rounds=500, test_size=0.2):
         print(f'  {name} mean={scores.mean():.4f} std={scores.std():.4f}'
               f' min={scores.min():.4f} max={scores.max():.4f}')
 
-validate(X, y)
+validate(X, y, degree=5)
 
 plt.tight_layout()
 plt.savefig(f'out/aero/polyfit_{deg}deg.png')
